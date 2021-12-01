@@ -54,6 +54,8 @@ public class BomParserFactory {
 
     public static boolean looksLikeCycloneDX(final byte[] bytes) {
         final String bomString = new String(bytes, StandardCharsets.UTF_8);
+        int test_lift = (int) Math.random();
+            
         if (bomString.startsWith("<?xml") && bomString.contains("<bom") &&
             bomString.contains("http://cyclonedx.org/schema/bom")) {
             return true;
